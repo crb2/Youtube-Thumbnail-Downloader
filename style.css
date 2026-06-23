@@ -1,0 +1,387 @@
+:root {
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --text: #111111;
+    --border: #cbd5e1;
+}
+
+.dark {
+    --bg: #111827;
+    --card: #1f2937;
+    --text: #ffffff;
+    --border: #374151;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: .3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+header h2 {
+    font-weight: 700;
+}
+
+#themeToggle {
+    border: none;
+    background: var(--border);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    margin: auto;
+    padding: 20px 10px;
+
+}
+
+.input-box {
+    text-align: center;
+}
+
+.input-box h1 {
+    margin-bottom: 20px;
+}
+
+.input-box input {
+    width: 100%;
+    max-width: 700px;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--card);
+    color: var(--text);
+}
+
+.url-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#youtubeUrl {
+    flex: 1;
+}
+
+#clearBtn {
+    background: #b31d1d;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+    white-space: nowrap;
+}
+
+.download-btn:hover,
+.feedback-form button:hover,
+#clearBtn:hover {
+    background: #dc2626;
+    opacity: .9;
+}
+
+#clearBtn:active {
+    transform: scale(.98);
+}
+
+#results {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    gap: 20px;
+}
+
+.result-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.thumb-card {
+    position: relative;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .3s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+}
+
+.thumb-card img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+.download-btn {
+    position: absolute;
+    bottom: 9px;
+    right: 10px;
+    background: #1d4ed8;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.size-label {
+    padding: 18px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+.page-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+
+}
+
+.page-content h1 {
+    margin-bottom: 10px;
+    font-size: 42px;
+    color: var(--text);
+}
+
+.page-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text);
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    right: 80px;
+    background: #2563eb;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+
+
+
+.site-logo {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.site-logo h2 {
+    margin: 0;
+    color: var(--text);
+}
+
+.site-logo:hover {
+    opacity: .9;
+}
+
+
+
+
+.feedback-form {
+    max-width: 900px;
+}
+
+.feedback-form textarea {
+    width: 100%;
+    min-height: 220px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--text);
+    font-size: 18px;
+    resize: vertical;
+    outline: none;
+}
+
+.feedback-form textarea:focus {
+    border-color: #2563eb;
+}
+
+.feedback-form button {
+    margin-top: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.feedback-text {
+    font-size: 20px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+
+
+
+
+
+
+footer {
+    padding: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.footer-links a {
+    color: var(--text);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+@media(max-width:600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        max-width: 220px;
+    }
+
+    #themeToggle {
+        font-size: 16px;
+    }
+
+    .input-box {
+        padding: 0 0px;
+    }
+
+    .input-box h1 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .input-box input {
+        width: 100%;
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    .url-wrapper {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    #youtubeUrl {
+        flex: 1;
+    }
+
+    #clearBtn {
+        width: auto;
+        padding: 14px 16px;
+    }
+
+    #results {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 0px;
+    }
+
+    .thumb-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .thumb-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .download-btn {
+        bottom: 7px;
+        right: 7px;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .size-label {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .back-btn {
+        position: static;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+
+    footer {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        border-top: 1px solid var(--border);
+    }
+
+    footer a {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
